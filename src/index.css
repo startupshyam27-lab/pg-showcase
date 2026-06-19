@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Warm teal palette for trust */
+    --primary: 174 58% 39%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Warm amber for CTAs */
+    --accent: 32 95% 55%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Warm cream backgrounds */
+    --background: 40 33% 98%;
+    --foreground: 220 20% 18%;
+    
+    /* Cards with subtle warmth */
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 18%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 18%;
+    
+    /* Secondary muted teal */
+    --secondary: 174 30% 95%;
+    --secondary-foreground: 174 58% 30%;
+    
+    /* Muted for subtle text */
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 45%;
+    
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 174 58% 39%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom tokens */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --boys: 217 91% 60%;
+    --boys-foreground: 0 0% 100%;
+    
+    --girls: 330 81% 60%;
+    --girls-foreground: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(174 58% 39%), hsl(174 58% 30%));
+    --gradient-accent: linear-gradient(135deg, hsl(32 95% 55%), hsl(25 95% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(174 58% 39% / 0.1), hsl(32 95% 55% / 0.1));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsl(220 20% 18% / 0.05);
+    --shadow-md: 0 4px 12px hsl(220 20% 18% / 0.08);
+    --shadow-lg: 0 8px 24px hsl(220 20% 18% / 0.12);
+    --shadow-glow: 0 0 24px hsl(174 58% 39% / 0.25);
+    
+    /* Sidebar (admin) */
+    --sidebar-background: 220 20% 14%;
+    --sidebar-foreground: 220 10% 90%;
+    --sidebar-primary: 174 58% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 20%;
+    --sidebar-accent-foreground: 220 10% 90%;
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: 174 58% 50%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 220 10% 95%;
+    --card: 220 20% 14%;
+    --card-foreground: 220 10% 95%;
+    --popover: 220 20% 14%;
+    --popover-foreground: 220 10% 95%;
+    --primary: 174 58% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 220 10% 90%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 32 95% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 174 58% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-card-hover {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .gender-boys {
+    @apply bg-boys text-boys-foreground;
+  }
+  
+  .gender-girls {
+    @apply bg-girls text-girls-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from { 
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to { 
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
