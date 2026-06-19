@@ -47,7 +47,15 @@ class MockQueryBuilder {
     const raw = localStorage.getItem(`mock_db_${this.tableName}`);
     if (raw) {
       try {
-        return JSON.parse(raw);
+        const parsed = JSON.parse(raw);
+        if (this.tableName === 'site_content') {
+          const subtitleItem = parsed.find((item: any) => item.key === 'hero_subtitle');
+          if (subtitleItem && subtitleItem.value && subtitleItem.value.includes("Fully furnished co-living spaces")) {
+            subtitleItem.value = "";
+            localStorage.setItem('mock_db_site_content', JSON.stringify(parsed));
+          }
+        }
+        return parsed;
       } catch (e) {
         console.error('Failed to parse mock db table', this.tableName, e);
       }
