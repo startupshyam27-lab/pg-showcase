@@ -34,9 +34,9 @@ export default function Footer() {
               </li>
 
               <li>
-                <Link to="/contact" className="text-background/70 hover:text-accent transition-colors text-sm">
+                <a href="/#contact" className="text-background/70 hover:text-accent transition-colors text-sm">
                   Contact Us
-                </Link>
+                </a>
               </li>
               {locations.map(loc => (
                 <li key={loc.id}>

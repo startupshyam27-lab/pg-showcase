@@ -7,7 +7,6 @@ import { DataProvider } from "@/context/DataContext";
 import { EditableContentProvider } from "@/context/EditableContentContext";
 import HomePage from "./pages/HomePage";
 import PGDetailPage from "./pages/PGDetailPage";
-import ContactPage from "./pages/ContactPage";
 import AdminLoginPage from "./pages/admin/AdminLoginPage";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import AdminLocationsPage from "./pages/admin/AdminLocationsPage";
@@ -37,7 +36,7 @@ const App = () => (
               {/* Public Routes */}
               <Route path="/" element={<HomePage />} />
               <Route path="/pg/:slug" element={<PGDetailPage />} />
-              <Route path="/contact" element={<ContactPage />} />
+
 
               {/* Admin Routes (Hidden - access via /admin) */}
               <Route path="/admin" element={<AdminLoginPage />} />

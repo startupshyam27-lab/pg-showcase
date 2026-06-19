@@ -29,12 +29,12 @@ export default function Header() {
             </Link>
           ))}
 
-          <Link
-            to="/contact"
+          <a
+            href="/#contact"
             className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           >
             Contact
-          </Link>
+          </a>
         </nav>
 
         <div className="flex items-center gap-3">

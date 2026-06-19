@@ -156,7 +156,7 @@ export default function AdminContentPage() {
                                         <div className="space-y-2">
                                             <Label>Link/Anchor</Label>
                                             <Input
-                                                value={formData['hero_cta_secondary_href'] || '/contact'}
+                                                value={formData['hero_cta_secondary_href'] || '#contact'}
                                                 onChange={e => handleChange('hero_cta_secondary_href', e.target.value)}
                                             />
                                         </div>
