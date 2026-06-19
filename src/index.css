@@ -149,6 +149,24 @@
   .gender-girls {
     @apply bg-girls text-girls-foreground;
   }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+  
+  .dark .glass-card {
+    background: rgba(20, 26, 42, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
 }
 
 @layer utilities {
@@ -162,6 +180,23 @@
   
   .animate-scale-in {
     animation: scaleIn 0.3s ease-out;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px hsl(174 58% 39% / 0.15), var(--shadow-md);
+  }
+
+  .active-press {
+    @apply transition-transform duration-100;
+  }
+
+  .active-press:active {
+    transform: scale(0.97);
   }
   
   @keyframes fadeIn {

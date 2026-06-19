@@ -19,7 +19,7 @@ export default function PGCard({ location }: PGCardProps) {
   return (
     <Link
       to={`/pg/${location.slug}`}
-      className="group relative overflow-hidden rounded-2xl bg-card border border-border shadow-card hover:shadow-card-hover transition-all duration-300"
+      className="group relative overflow-hidden rounded-2xl glass-card border border-border shadow-card hover-lift active-press"
     >
       <div className="aspect-[4/3] relative overflow-hidden bg-secondary">
         {location.image ? (
@@ -49,11 +49,11 @@ export default function PGCard({ location }: PGCardProps) {
         </p>
 
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs sm:text-sm text-muted-foreground">
             <span>{location.floors.length} Floors</span>
-            <span>•</span>
+            <span className="opacity-50">•</span>
             <span>{totalRooms} Rooms</span>
-            <span>•</span>
+            <span className="opacity-50">•</span>
             <span>{totalBeds} Beds</span>
           </div>
         </div>

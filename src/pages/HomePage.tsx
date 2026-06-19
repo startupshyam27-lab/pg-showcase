@@ -34,7 +34,7 @@ export default function HomePage() {
               tag="h1"
               contentKey="hero_title"
               defaultContent={settings.heroTitle}
-              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-slide-up"
+              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-6 animate-slide-up"
             />
             <EditableText
               contentKey="hero_subtitle"
@@ -131,7 +131,7 @@ export default function HomePage() {
             {displayBenefits.map((item, index) => (
               <div
                 key={item.id || index}
-                className="p-6 rounded-xl bg-card border border-border shadow-card animate-scale-in"
+                className="p-6 rounded-xl glass-card border border-border/50 shadow-card hover-lift animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CheckCircle2 className="h-8 w-8 text-primary mb-4" />
@@ -156,7 +156,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="p-6 rounded-xl bg-card border border-border shadow-card hover:border-primary/30 transition-all">
+            <div className="p-6 rounded-xl glass-card border border-border/50 shadow-card hover-lift cursor-default">
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary font-bold">
                 01
               </div>
@@ -166,7 +166,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-card border border-border shadow-card hover:border-primary/30 transition-all">
+            <div className="p-6 rounded-xl glass-card border border-border/50 shadow-card hover-lift cursor-default">
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary font-bold">
                 02
               </div>
@@ -176,7 +176,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-card border border-border shadow-card hover:border-primary/30 transition-all">
+            <div className="p-6 rounded-xl glass-card border border-border/50 shadow-card hover-lift cursor-default">
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary font-bold">
                 03
               </div>
@@ -205,7 +205,7 @@ export default function HomePage() {
             {locations.map((location, index) => (
               <div
                 key={location.id}
-                className="p-8 rounded-2xl bg-card border border-border shadow-card hover:border-primary/30 transition-all animate-scale-in"
+                className="p-8 rounded-2xl glass-card border border-border/50 shadow-card hover-lift animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <h3 className="font-display text-2xl font-bold text-foreground mb-6">
@@ -301,8 +301,8 @@ export default function HomePage() {
               Contact us today for room availability and pricing. We're here to help you find the perfect accommodation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`tel:${locations[0]?.phone}`}>
-                <Button variant="secondary" size="lg">
+              <a href={`tel:${locations[0]?.phone}`} className="active-press">
+                <Button variant="secondary" size="lg" className="w-full">
                   <Phone className="h-4 w-4" />
                   Call Now
                 </Button>
@@ -311,8 +311,9 @@ export default function HomePage() {
                 href={`https://wa.me/${locations[0]?.whatsapp?.replace(/[^0-9]/g, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="active-press"
               >
-                <Button variant="whatsapp" size="lg">
+                <Button variant="whatsapp" size="lg" className="w-full">
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp Us
                 </Button>

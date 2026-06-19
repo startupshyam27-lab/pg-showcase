@@ -106,7 +106,7 @@ export default function PGDetailPage() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <a href={`tel:${location.phone}`}>
+                <a href={`tel:${location.phone}`} className="active-press">
                   <Button variant="default" size="lg">
                     <Phone className="h-4 w-4" />
                     Call Now
@@ -116,6 +116,7 @@ export default function PGDetailPage() {
                   href={`https://wa.me/${location.whatsapp?.replace(/[^0-9]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="active-press"
                 >
                   <Button variant="whatsapp" size="lg">
                     <MessageCircle className="h-4 w-4" />
@@ -126,6 +127,7 @@ export default function PGDetailPage() {
                   href={location.mapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="active-press"
                 >
                   <Button variant="outline" size="lg">
                     <MapPin className="h-4 w-4" />
@@ -183,7 +185,7 @@ export default function PGDetailPage() {
               Get in touch with us for more information about available rooms and pricing.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href={`tel:${location.phone}`}>
+              <a href={`tel:${location.phone}`} className="active-press">
                 <Button variant="default" size="lg">
                   <Phone className="h-4 w-4" />
                   {location.phone}
@@ -193,6 +195,7 @@ export default function PGDetailPage() {
                 href={`https://wa.me/${location.whatsapp?.replace(/[^0-9]/g, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="active-press"
               >
                 <Button variant="whatsapp" size="lg">
                   <MessageCircle className="h-4 w-4" />

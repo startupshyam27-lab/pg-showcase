@@ -18,6 +18,7 @@ interface EditableButtonProps {
     variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | "whatsapp" | "hero" | "hero-outline";
     size?: "default" | "sm" | "lg" | "icon" | "xl";
     icon?: React.ReactNode;
+    hideTextOnMobile?: boolean;
 }
 
 export default function EditableButton({
@@ -30,7 +31,8 @@ export default function EditableButton({
     className,
     variant = "default",
     size = "default",
-    icon
+    icon,
+    hideTextOnMobile = false
 }: EditableButtonProps) {
     const { isEditMode, content, updateContent } = useEditableContent();
     const [isOpen, setIsOpen] = useState(false);
@@ -68,10 +70,14 @@ export default function EditableButton({
         <Button
             variant={variant}
             size={size}
-            className={cn(className, isEditMode && "relative border-2 border-dashed border-primary/50 pointer-events-none")}
+            className={cn(className, "active-press", isEditMode && "relative border-2 border-dashed border-primary/50 pointer-events-none")}
         >
             {icon}
-            {displayText}
+            {hideTextOnMobile ? (
+                <span className="hidden sm:inline-flex ml-1.5">{displayText}</span>
+            ) : (
+                displayText
+            )}
             {isEditMode && (
                 <span className="absolute -top-3 -right-3 bg-primary text-primary-foreground p-1 rounded-full z-50 shadow-md">
                     <Pencil className="h-3 w-3" />
