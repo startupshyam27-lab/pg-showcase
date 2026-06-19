@@ -32,11 +32,7 @@ export default function Footer() {
                   Home
                 </Link>
               </li>
-              <li>
-                <Link to="/about" className="text-background/70 hover:text-accent transition-colors text-sm">
-                  About Us
-                </Link>
-              </li>
+
               <li>
                 <Link to="/contact" className="text-background/70 hover:text-accent transition-colors text-sm">
                   Contact Us

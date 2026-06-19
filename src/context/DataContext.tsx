@@ -109,7 +109,9 @@ export function DataProvider({ children }: { children: ReactNode }) {
         const newSettings = { ...initialSettings };
         settingsData.forEach(item => {
           if (item.key === 'hero_title') newSettings.heroTitle = item.value;
-          if (item.key === 'hero_subtitle') newSettings.heroSubtitle = item.value;
+          if (item.key === 'hero_subtitle') {
+            newSettings.heroSubtitle = item.value && item.value.includes("Fully furnished co-living spaces") ? "" : item.value;
+          }
           if (item.key === 'footer_text') newSettings.footerText = item.value;
         });
         setSettings(newSettings);

@@ -28,12 +28,7 @@ export default function Header() {
               {loc.name}
             </Link>
           ))}
-          <Link
-            to="/about"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            About Us
-          </Link>
+
           <Link
             to="/contact"
             className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
