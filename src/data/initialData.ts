@@ -19,10 +19,10 @@ export const initialLocations: PGLocation[] = [
     slug: 'akruti-pg',
     propertyType: 'bungalow',
     description: 'A spacious bungalow-style PG with modern amenities, homely environment, and 24/7 security. Perfect for students and working professionals seeking comfort and convenience.',
-    address: '123 Main Street, Sector 15, City - 400001',
-    mapUrl: 'https://maps.google.com/?q=19.0760,72.8777',
-    phone: '+91 98765 43210',
-    whatsapp: '+91 98765 43210',
+    address: '4, Sonal Society, Gurukul Rd, Memnagar, Ahmedabad, Gujarat 380052',
+    mapUrl: 'https://maps.google.com/?q=4,+Sonal+Society,+Gurukul+Rd,+Memnagar,+Ahmedabad,+Gujarat+380052',
+    phone: '+91 94281 21219',
+    whatsapp: '+91 94281 21219',
     image: '',
     floors: [
       {
@@ -80,8 +80,8 @@ export const initialLocations: PGLocation[] = [
     description: 'A modern flat-style PG offering premium living experience with all essential amenities. Ideal for those who prefer a compact yet comfortable living space.',
     address: '456 Park Avenue, Sector 22, City - 400002',
     mapUrl: 'https://maps.google.com/?q=19.0860,72.8877',
-    phone: '+91 98765 43211',
-    whatsapp: '+91 98765 43211',
+    phone: '+91 94281 21219',
+    whatsapp: '+91 94281 21219',
     image: '',
     floors: [
       {

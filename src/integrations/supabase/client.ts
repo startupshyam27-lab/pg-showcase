@@ -55,6 +55,13 @@ class MockQueryBuilder {
             localStorage.setItem('mock_db_site_content', JSON.stringify(parsed));
           }
         }
+        if (this.tableName === 'locations') {
+          const hasOldData = parsed.some((item: any) => item.address && item.address.includes("123 Main Street"));
+          if (hasOldData) {
+            localStorage.removeItem('mock_db_locations');
+            return initialLocations;
+          }
+        }
         return parsed;
       } catch (e) {
         console.error('Failed to parse mock db table', this.tableName, e);
