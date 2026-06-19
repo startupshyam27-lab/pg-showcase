@@ -11,14 +11,14 @@ if (!supabaseUrl || !supabaseKey || supabaseUrl.includes('YOUR_NEW_SUPABASE')) {
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const siteContent = [
-  { key: 'hero_title', value: 'Find Your Perfect PG Home', type: 'text', group: 'settings' },
-  { key: 'hero_subtitle', value: 'Comfortable, affordable, and well-maintained paying guest accommodations with all modern amenities.', type: 'text', group: 'settings' },
+  { key: 'hero_title', value: 'Premium & Affordable PG in Vastrapur, Ahmedabad', type: 'text', group: 'settings' },
+  { key: 'hero_subtitle', value: "Fully furnished co-living spaces, boys' hostels, and girls' PGs with home-style food, high-speed Wi-Fi, and 24/7 security.", type: 'text', group: 'settings' },
   { key: 'footer_text', value: '© 2024 PG Homes. All rights reserved.', type: 'text', group: 'settings' },
-  { key: 'hero_cta_primary', value: 'View Our PGs', type: 'link', group: 'settings' },
-  { key: 'hero_cta_secondary', value: 'Contact Us', type: 'link', group: 'settings' },
-  { key: 'header_call_btn', value: 'Call Now', type: 'text', group: 'settings' },
+  { key: 'hero_cta_primary', value: 'Book a Visit', type: 'link', group: 'settings' },
+  { key: 'hero_cta_secondary', value: 'Check Room Availability', type: 'link', group: 'settings' },
+  { key: 'header_call_btn', value: 'Book a Visit', type: 'text', group: 'settings' },
   { key: 'header_whatsapp_btn', value: 'WhatsApp Us', type: 'text', group: 'settings' },
-  { key: 'footer_description', value: 'Affordable and well-maintained paying guest accommodations.', type: 'text', group: 'settings' },
+  { key: 'footer_description', value: 'Affordable and well-maintained paying guest accommodations in Vastrapur, Ahmedabad.', type: 'text', group: 'settings' },
   { key: 'footer_copyright', value: '© 2024 PG Homes. All rights reserved.', type: 'text', group: 'settings' }
 ];
 

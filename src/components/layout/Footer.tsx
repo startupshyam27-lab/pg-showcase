@@ -25,8 +25,23 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold mb-4">Our Locations</h4>
+            <h4 className="font-display font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-background/70 hover:text-accent transition-colors text-sm">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-background/70 hover:text-accent transition-colors text-sm">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-background/70 hover:text-accent transition-colors text-sm">
+                  Contact Us
+                </Link>
+              </li>
               {locations.map(loc => (
                 <li key={loc.id}>
                   <Link

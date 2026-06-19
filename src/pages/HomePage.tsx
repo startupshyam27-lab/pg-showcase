@@ -45,7 +45,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <EditableButton
                 contentKey="hero_cta_primary"
-                defaultText="View Our PGs"
+                defaultText="Book a Visit"
                 defaultHref="#locations"
                 variant="hero"
                 size="xl"
@@ -53,7 +53,7 @@ export default function HomePage() {
               />
               <EditableButton
                 contentKey="hero_cta_secondary"
-                defaultText="Contact Us"
+                defaultText="Check Room Availability"
                 defaultHref="/contact"
                 variant="hero-outline"
                 size="xl"
@@ -120,8 +120,11 @@ export default function HomePage() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Why Choose Us?
+              Why Choose Akruti PG Vastrapur?
             </h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto text-base leading-relaxed mt-4">
+              Finding the right paying guest accommodation in Ahmedabad can be stressful. At Akruti PG, we bridge the gap between luxury co-living and budget-friendly rentals. Located in the heart of Vastrapur and Gurukul, our properties offer seamless connectivity to major educational institutes, coaching hubs, and corporate offices. Whether you are looking for a single-occupancy AC room or an affordable triple-sharing budget PG, we provide a safe, hygienic, and vibrant community environment.
+            </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -136,6 +139,52 @@ export default function HomePage() {
                 <p className="text-sm text-muted-foreground">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location & Nearby Landmarks Section */}
+      <section className="py-20 border-t border-border">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Strategic Location in Vastrapur, Ahmedabad
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our PG branches are strategically positioned near Ahmedabad's top commercial, educational, and leisure hotspots.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="p-6 rounded-xl bg-card border border-border shadow-card hover:border-primary/30 transition-all">
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary font-bold">
+                01
+              </div>
+              <h3 className="font-display font-semibold text-lg text-foreground mb-3">Colleges & Institutes</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Enjoy an easy, hassle-free commute to premier educational landmarks including <strong>IIM Ahmedabad</strong>, <strong>Ahmedabad University</strong>, and <strong>NID</strong>.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-xl bg-card border border-border shadow-card hover:border-primary/30 transition-all">
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary font-bold">
+                02
+              </div>
+              <h3 className="font-display font-semibold text-lg text-foreground mb-3">Leisure & Shopping</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Live steps away from scenic <strong>Vastrapur Lake</strong>, premier shopping at <strong>AlphaOne (Ahmedabad One) Mall</strong>, and vibrant local street food markets.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-xl bg-card border border-border shadow-card hover:border-primary/30 transition-all">
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary font-bold">
+                03
+              </div>
+              <h3 className="font-display font-semibold text-lg text-foreground mb-3">Connectivity</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Stay exceptionally well-connected to major arterial routes like <strong>SG Highway</strong>, <strong>Nehru Nagar</strong>, and <strong>Satellite</strong> areas via local public transport.
+              </p>
+            </div>
           </div>
         </div>
       </section>

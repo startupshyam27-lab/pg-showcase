@@ -116,7 +116,7 @@ export const initialLocations: PGLocation[] = [
 ];
 
 export const initialSettings: SiteSettings = {
-  heroTitle: 'Find Your Perfect PG Home',
-  heroSubtitle: 'Comfortable, affordable, and well-maintained paying guest accommodations with all modern amenities.',
+  heroTitle: 'Premium & Affordable PG in Vastrapur, Ahmedabad',
+  heroSubtitle: "Fully furnished co-living spaces, boys' hostels, and girls' PGs with home-style food, high-speed Wi-Fi, and 24/7 security.",
   footerText: '© 2024 PG Homes. All rights reserved.',
 };
